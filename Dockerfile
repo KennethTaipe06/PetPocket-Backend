@@ -15,7 +15,7 @@ COPY . .
 # Importante: si el host tiene node_modules (Windows), puede sobrescribir los binarios Linux.
 # Forzamos una instalación limpia dentro de la imagen.
 RUN rm -rf node_modules \
-	&& npm ci --omit=dev
+    && npm ci --omit=dev
 
 ENV NODE_ENV=production
 ENV PORT=3000
